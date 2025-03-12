@@ -58,7 +58,7 @@ for i in range(len(time)-1):    #   Only need to update n-1 times since the list
 #   Plot the results
 def analytical_results(t, x0, coefficients):
     m, k = coefficients
-    x = x0 * np.cos((k/m)**2 * t)
+    x = x0 * np.cos((k/m)**0.5 * t)
     return x
 
 plt.plot(time, coordinate_x_generic, label='generic solver')
